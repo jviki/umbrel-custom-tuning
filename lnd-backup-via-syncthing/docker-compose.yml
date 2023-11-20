@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: lnd-backup-via-syncthing_server_1
+      APP_PORT: 17717
+    
+  backuper:
+    build:
+      context: .
+    user: "1000:1000"
+    init: true
+    volumes:
+      - "${APP_LIGHTNING_NODE_DATA_DIR}:/lnd:ro"
+      - "${APP_DATA_DIR}/../syncthing/data/Sync:/syncthing"

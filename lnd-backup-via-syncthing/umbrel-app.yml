@@ -1,0 +1,29 @@
+manifestVersion: 1
+id: lnd-backup-via-syncthing
+name: Lightning Node backup via Syncthing
+tagline: Backup Lightning Node channgels via Syncthing
+icon: https://svgur.com/i/mvA.svg
+category: bitcoin
+version: "1.0.0"
+port: 17717
+description: >-
+  Lightning Node backup is done by uploading to Umbrel's storage
+  in its default configuration. There is now other possibility
+  how to perform the backup. This application connects the Lightning
+  Node and Syncthing applications and copies the channels backup
+  file in the background between them.
+
+developer: Jan Viktorin
+website: https://github.com/jviki/umbrel-custom-tuning
+submitter: Jan Viktorin
+submission: ""
+repo: https://github.com/jviki/umbrel-custom-tuning
+support: https://github.com/jviki/umbrel-custom-tuning/issues
+gallery: []
+releaseNotes: ""
+dependencies:
+  - lightning
+  - syncthing
+path: ""
+defaultUsername: ""
+deterministicPassword: true
